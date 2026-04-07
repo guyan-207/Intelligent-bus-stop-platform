@@ -20,3 +20,28 @@
 3.  **远程配置**：管理员通过蓝牙远程修改公交到站时间
 
 ## 工程目录说明
+/
+├── Core/ # 核心代码（main.c、中断服务函数、用户逻辑）
+├── Drivers/ # STM32 HAL 库驱动文件
+├── MDK-ARM/ # Keil MDK 工程文件（.uvprojx 等）
+├── .mxproject # STM32CubeMX 工程配置文件
+├── Intelligent bus stop platform.ioc # STM32CubeMX 工程源文件
+├── 基于 51 单片机的智能公交站台模型.pdf # 项目设计文档
+└── README.md # 项目说明文档
+
+## 硬件清单
+- STM32F103C8T6核心板
+- OLED I2C显示屏（128×64）
+- DS1302实时时钟模块
+- DHT11温湿度传感器
+- 光敏电阻模块
+- LED照明灯+限流电阻
+- 独立按键、有源蜂鸣器
+- HC-05/HC-06蓝牙模块
+- 杜邦线、电源模块
+
+## 使用说明
+1.  用STM32CubeIDE/Keil打开工程，直接编译下载
+2.  按原理图完成硬件接线
+3.  上电运行，OLED显示所有功能数据
+4.  蓝牙连接手机APP，实现远程监控与控制
